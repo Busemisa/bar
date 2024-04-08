@@ -1,0 +1,473 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.slick/1.8.1/slick.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+  <!--navbar başlangıcı-->
+    <nav style="margin-top: -69px; margin-left: -80px; margin-right: -80px;">
+        <a href="#" class="logo">GO BARS</a>
+        <div class="ana-menu">
+            <label for="menu-check">MENU</label>
+            <input type="checkbox" id="menu-check" />
+            <ul class="menu-links">
+                <li><a href="#">ANA SAYFA</a></li>
+                <li><a href="#">YAZILAR</a></li>
+                <li><a href="#">GALERİ</a></li>
+                <li><a href="#">HAKKIMDA</a></li>
+                <li><a href="#">İLETİŞİM</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--navbar bitişi-->
+
+
+
+    <!--kayan yazı başlangıcı-->
+    <div style="margin-top: -1px;" class="slider-container">
+        <div class="slider">
+          <div class="slide">
+            <p>ORDER 2 BOXES AND SAVE 20%</p>
+          </div>
+          <div class="slide">
+            <p>ORDER 2 BOXES AND SAVE 20%</p>
+          </div>
+          <div class="slide">
+            <p>ORDER 2 BOXES AND SAVE 20%</p>
+          </div>
+        </div>
+      </div>
+    
+      <script src="script.js"></script>
+      <!--kayan yazı bitişi-->
+
+      
+
+      <!--yazı ve resim başlangıcı-->
+      <div style="margin-top: 60px;" class="container">
+        <div class="content">
+        <div style="text-align: left;margin-left: 200px; font-size: xx-large; margin-top: -200px;">
+          <h2 style="margin-top: 200px;">EAT WELL</h2>
+          <h2>LIVE WELL</h2>
+        </div>
+
+        <div style="text-align: left;margin-left: 200px;font-size: xxx-large;">-</div>
+
+          <div style="margin-left: 200px;"><p style="margin-top: 20px; text-align: left; font-size: x-large;">I'm a paragraph. Click here to add your <br> 
+            own text and edit me. I’m a great place for <br>
+             you to tell a story and let your users know a <br>
+              little more about you.</p>
+          </div>
+
+          <div style="margin-top: 30px;text-align: left;margin-left: 200px;"><button >Shop Now</button></div>
+        </div>
+        <div class="image-container">
+          <img style="background-color: rgb(255, 255, 255);" src="resim/bar.webp" alt="Resim">
+        </div>
+      </div>
+      <!--yazı ve resim bitişi-->
+
+      <!--yazı başlangıcı-->
+      <div style="text-align: center;font-size:large;"><p>Our Products <br> <br>
+        I'm a paragraph. Click here to add your own text <br>
+         and edit me. It’s easy. 
+        </p></div>
+        <!--yazı bitişi-->
+
+
+      
+       <!--büyük slider başlangıcı-->
+        <div class="slider-container">
+          <button class="prev" id="prevBtn">&#10094;</button>
+          <div class="slider" id="slider">
+            
+            <div class="product-card">
+                <img src="resim/bar.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 1</p>
+              </div>
+              <div class="product-card">
+                <img src="resim/bar1.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 2</p>
+              </div>
+              <div class="product-card">
+                <img src="resim/bar2.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 3</p>
+              </div>
+              <div class="product-card">
+                <img src="resim/bar3.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 4</p>
+              </div>
+              <div class="product-card">
+                <img src="resim/bar4.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 5</p>
+              </div>
+              <div class="product-card">
+                <img src="resim/bar3.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 6</p>
+              </div>
+              <div class="product-card">
+                <img src="resim/bar2.webp" alt="Ürün 1">
+                <h3>Ürün 1 Başlık</h3>
+                <p>Açıklama 7</p>
+              </div>
+              
+              
+            <!-- Diğer ürün kartları buraya eklenebilir -->
+          </div>
+          <button class="next" id="nextBtn">&#10095;</button>
+        </div>
+        <!--büyük slider bitişi-->
+
+
+        <!--büyük sliderın kaymasını sağlama başlangıcı-->
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.getElementById('slider');
+            const productCards = document.querySelectorAll('.product-card');
+            const totalSlides = productCards.length;
+            let currentSlide = 0;
+        
+            function showSlide(index) {
+              if (index >= totalSlides) {
+                currentSlide = 0;
+              } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+              } else {
+                currentSlide = index;
+              }
+        
+              const translateValue = -currentSlide * (300 + 20); // Width + margin-right
+              slider.style.transform = `translateX(${translateValue}px)`;
+            }
+        
+            function prevSlide() {
+              showSlide(currentSlide - 1);
+            }
+        
+            function nextSlide() {
+              showSlide(currentSlide + 1);
+            }
+        
+            // Event listeners
+            document.getElementById('prevBtn').addEventListener('click', prevSlide);
+            document.getElementById('nextBtn').addEventListener('click', nextSlide);
+        
+            // Initial slide
+            showSlide(currentSlide);
+          });
+        </script>
+        <!--büyük sliderın kaymasını sağlama bitişi-->
+
+
+
+<!--ürünlerin üzerine gelindiğinde oynama başlangıcı-->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const productCards = document.querySelectorAll('.product-card');
+
+    productCards.forEach(card => {
+      card.addEventListener('mouseenter', function () {
+        this.style.transform = 'rotate(5deg)';
+      });
+
+      card.addEventListener('mouseleave', function () {
+        this.style.transform = 'rotate(0deg)';
+      });
+    });
+  });
+</script>
+<!--ürünlerin üzerine gelindiğinde oynama başlangıcı-->
+
+
+
+
+
+
+<!--resim ve yazı buton alan başlangıcı-->
+<div>
+  <img style="background-color:rgb(237, 213, 213)" src="resim/uzun ince.webp" alt="">
+  <div style="margin-top: -160px;">
+  <p style="text-align: center; font-size: x-large; color: black; ">
+    Sign up for Our Newsletter <br>
+    
+  </p>
+  <p style="text-align: center; font-size: xx-large;color:black;margin-top: 10px; ">
+    FOR SOME HEALTHY TIPS
+  </p>
+</div>
+</div>
+
+<div style="margin-top: 30px;text-align: left;margin-left: 660px; background-color:rgb(247, 201, 201) ;"><button >Sign Up</button></div>
+<!--resim ve yazı buton alan bitişi-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- büyük 4 lü resimlerin başlangıcı -->
+<div style="text-align: center; margin-top: 50px;">
+  <p style="font-size: x-large; color: black; ">Go Bar Gallery</p> <br>
+  <p style="color: black; font-size: large;">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or </p> <br>
+  <p style="margin-top: -15px; color: black;font-size: large;">double click me to add your own content and make changes to the font. </p> <br> <br>
+</div>
+
+
+
+
+ <!-- Kare Alanı -->
+ <div style="margin-top: 70px;" class="kare-alan">
+  <!-- Sol üst kare -->
+  <div class="kare">
+      <img src="resim/dörtgen bir.webp" alt="Sol Üst Resim">
+  </div>
+
+
+
+
+
+
+
+
+
+
+  <!-- Sağ üst kare -->
+  <div style="background-color: rgb(255, 255, 255);" class="kare">
+      <div style="background-color: rgb(255, 255, 255);" class="yazi">
+        <p style="text-align: left; color: black;font-size: xx-large; font-weight: 200;">Order 2 Boxes <br> <br> 
+          SAVE 20%
+        </p>
+        <div style="text-align: left;margin-left: 10px;font-size: xxx-large;">-</div>
+
+        <div>
+          <p style="text-align: left; color: black; font-weight:100; font-size: large;">
+            I’m a paragraph . Double click here or click Edit Text to <br>
+             add some text of your own or to change the font. Tell <br>
+              your visitors a bit about your services.
+          </p>
+        </div>
+
+        <div style="margin-top: 30px;text-align: left;margin-left: 1px;"><button >Shop Now</button></div>
+
+
+      </div>
+  </div>
+
+
+
+  <!-- Sol alt kare -->
+  <div class="kare">
+    <p style="text-align: left; font-size:xx-large;color: black; font-weight: 200;">Try Our <br> <br>
+      NEWEST FLAVOR
+    </p>
+
+    <div style="text-align: left;margin-left: -270px;font-size: xxx-large; margin-top: 200px;">-</div>
+
+    <div>
+      <p style="text-align: left; color: black; font-weight:100; font-size: large; margin-top: 370px; margin-left: -20px;">
+        I’m a paragraph . Double click here or click Edit Text to <br>
+         add some text of your own or to change the font. Tell <br>
+          your visitors a bit about your services.
+      </p>
+
+      <div style="margin-top: 30px;text-align: left;margin-left: -19px;"><button >Shop Now</button></div>
+
+    </div>
+
+  </div>
+
+  <!-- Sağ alt kare -->
+  <div class="kare">
+      <img src="resim/dörtgen iki.webp" alt="Sağ Alt Resim">
+  </div>
+</div>
+<!-- büyük 4 lü resimlerin bitişi -->
+
+
+
+
+
+<!--yine 4 resim başlangıcı-->
+<div class="container">
+  <div class="image-box">
+    <img src="resim/diş.jpeg" alt="">
+    <div class="overlay">
+      <div class="overlay-text">@wix: #wix, #website, #freewebsite, #websitetemplate, #wix.com</div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="resim/meyve.jpeg" alt="">
+    <div class="overlay">
+      <div class="overlay-text">@wix: #wix, #website, #freewebsite, #websitetemplate, #wix.com</div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="resim/güzel.jpeg" alt="">
+    <div class="overlay">
+      <div class="overlay-text">@wix: #wix, #website, #freewebsite, #websitetemplate, #wix.com</div>
+    </div>
+  </div>
+
+  <div class="image-box">
+    <img src="resim/yaban.jpeg" alt="">
+    <div class="overlay">
+      <div class="overlay-text">@wix: #wix, #website, #freewebsite, #websitetemplate, #wix.com</div>
+    </div>
+  </div>
+</div>
+<!--yine 4 resim bitişi-->
+
+
+
+
+<!--hr için süslemeler başladı-->
+<style>
+  body {
+    margin: 70px; /* Sayfa kenar boşlukları sıfır yapıldı */
+    padding: 0; /* Sayfa içerik boşluğu sıfır yapıldı */
+    font-family: Arial, sans-serif; /* Sayfa font ailesi belirlendi */
+    background-color: #f8f8f8; /* Sayfa arkaplan rengi belirlendi */
+
+  }
+
+  hr {
+    border: none; /* <hr> elementinin kenar çizgisi kaldırıldı */
+    height: 2px; /* <hr> elementinin yüksekliği belirlendi */
+    background-color: #ff69b4; /* <hr> elementinin arkaplan rengi (pembe) belirlendi */
+    opacity: 3; /* <hr> elementinin opaklığı belirlendi */
+    margin: 20px 0; /* <hr> elementinin etrafındaki boşluk belirlendi */
+    border-radius: 90%;
+  
+  }
+</style>
+<!--hr için süslemeler bitti-->
+
+<br>  <br>  <hr>
+
+
+
+
+<!--footer başlangıcı-->
+<div>
+<div class="footer">
+  <div class="footer-left">
+    <p style="color: #f8f8f8;">Follow us on: </p>  <br>
+
+    <div style="margin-left: 170px;" class="social-media-icons">
+    <i class="fab fa-pinterest"></i>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-instagram"></i>
+  </div>
+  </div>
+
+
+
+
+
+  <div class="footer-center">
+    <p style="color: #f8f8f8;">Subscribe to our newslette</p>
+
+    <div style="margin-top: 10px;" class="subscribe-container">
+      <input type="email" placeholder="Enter your email">
+      <button class="subscribe-button">Subscribe Now</button>
+    </div>
+  
+
+  
+
+  </div>
+  <div class="footer-right">
+    <p style="color: #f8f8f8;">Contact Us:</p> <br>
+    <p style="color: #f8f8f8;">123-456-7890  |  info@mysite.com</p>
+   
+  </div>
+</div>
+
+
+<!--footer bitişi-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+    
+      <script src="script.js"></script>
+       
+  
+    
+</body>
+</html>

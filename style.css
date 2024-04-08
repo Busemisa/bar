@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  a {
+    color: rgb(241, 244, 247);
+    text-decoration: none;
+    
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 2rem;
+    
+  }
+  #menu-check:checked + .menu-links {
+    display: block;
+   
+  }
+  
+  .menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block; /* Mobil boyutta içerideki bağlantıları göstermek için */
+  }
+  .menu-links li {
+    padding: 0.5rem 1rem;
+  }
+
+  #menu-check:checked + .menu-links {
+    display: block;
+  }
+
+  @media only screen and (min-width: 900px) {
+    label {
+      display: none;
+    }
+    .menu-links {
+      display: flex;
+      position: inherit;
+      background: none;
+    }
+  }
+
+  /* Navbar Stilleri */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fabebe;
+    padding: 15px;
+    color: white;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .ana-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  label {
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .menu-links li {
+    margin: 0 30px; /* Öğeler arasındaki mesafe */
+    position: relative;
+  }
+  
+  .menu-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.5s, transform 0.5s;
+  }
+  
+  /* Üzerine Gelindiğinde Renk ve Büyüme Efekti */
+  .menu-links li:hover a {
+    color: #ffafee; /* İstenilen renk */
+    transform: scale(8.9); /* İstenilen büyüklük (1.1 = %10 büyütme) */
+  }
+
+  
+  .logo:hover {
+    color: pink; /* Logo üzerine gelindiğinde rengin pembe olacak */
+  }
+
+  body {
+  margin: 0; 
+  
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+ 
+  
+  
+}
+
+.slider {
+  display: flex;
+  animation: slide 27s linear infinite;
+}
+
+.slide {
+  flex:0 0 100%;
+  background-color: #080101;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+@keyframes slide {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(-200%);
+  }
+  75% {
+    transform: translateX(-300%);
+  }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  .content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  h2 {
+    margin: 0;
+  }
+  
+  .image-container {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Geçiş süresi ekleyelim */
+  }
+  
+  button:hover {
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .slider-container {
+    width: 80%;
+    margin: 50px auto;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 9s ease-in-out;
+}
+
+
+  .product-card {
+    min-width: 300px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #666;
+    font-family:Georgia, 'Times New Roman', Times, serif
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #333;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  product-card {
+    min-width: 300px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .product-card:hover {
+    transform: rotate(5deg); /* İstenilen dereceyi ayarlayabilirsiniz */
+  }
+
+
+
+
+
+  /* Kare alanın Genel stil ayarları */
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+
+
+
+
+/* Kare alanı stil ayarları */
+.kare-alan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Kareler arası boşluk */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Sitenin yüksekliğine uygun olarak güncelleyin */
+    background-color: rgb(255, 255, 255);
+}
+
+/* Her bir karenin stil ayarları */
+.kare {
+    flex: 1 0 calc(50% - 10px); /* Karelerin genişliği ve boşlukları uygun olarak güncelleyin */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; /* Kare arkaplan rengi */
+    border: 1px solid #ffffff; /* Kare kenarlık rengi */
+    border: none;
+}
+
+/* İlk karedeki resim için stil ayarları */
+.kare img {
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+/* Yazı alanlarının stil ayarları */
+.yazi {
+  text-align: center;
+  width: 100%; /* Yazı alanını tam genişlikte yapar */
+  box-sizing: border-box; /* Padding ve border'ı içeriden alır */
+  padding: 10px; /* İstenilen iç boşluk */
+}
+
+/* Alt karelerin arkaplan rengi */
+.alt-kare {
+  background-color: #fffffe; /* İstenilen arkaplan rengi */
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  margin-top: 700px;
+}
+
+.image-box {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.image-box:hover {
+  filter: grayscale(80%);
+  transform: scale(1.1);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+}
+
+.image-box:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  display: flex;
+  background-color: #ffcbcb; /* Footer arkaplan rengi */
+  color: rgb(226, 212, 212); /* Footer yazı rengi */
+  padding: 10px; /* Footer iç boşluk */
+ 
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1; /* Her bir bölümün eşit uzunlukta olması için */
+  text-align: center; /* İçerik ortalanacak */
+}
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.social-media-icons {
+  display: flex;
+
+}
+
+.social-media-icons i {
+  color: white; /* Logoların rengi */
+  font-size: 24px; /* İkon boyutu, istediğiniz değeri kullanabilirsiniz */
+  margin-right: 2px; /* Logolar arasındaki boşluk */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
